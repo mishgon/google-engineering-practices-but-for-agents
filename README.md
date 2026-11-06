@@ -15,9 +15,7 @@ your repository. If you already have an AGENTS.md, merge the sections instead of
 overwriting your instructions. Preserve the guide paths, licenses and provenance
 files. You can give this task directly to your coding agent.
 
-Codex reads AGENTS.md automatically. Its instructions ask authors and reviewers to
-read the relevant local guides; the entire docs directory is not loaded into every
-prompt. Some upstream style-guide links use published `.html` paths; read the
+Some upstream style-guide links use published `.html` paths; read the
 corresponding `.md` source locally when a generated HTML file is absent. Guides
 hosted outside google/styleguide remain external links.
 
@@ -26,15 +24,22 @@ hosted outside google/styleguide remain external links.
 Configure this separately for **each repository**, including repositories created
 from this template:
 
-1. Connect GitHub to Codex and grant access to the repository.
-2. Open [Codex Code Review settings](https://chatgpt.com/codex/cloud/settings/general),
-   select the repository, and enable **Automatic review** for all eligible PRs.
-3. Set the review trigger to **On every push** so fixes receive another review.
-   If the repository uses **Follow personal preferences**, also enable Automatic
-   review in the relevant personal preferences, or choose the repository-wide option.
-4. Open a non-draft PR and verify that Codex starts reviewing automatically. Push a
-   correction and verify review starts for the new commit too. The root AGENTS.md
-   includes `## Code Review Rules` for reviewer guidance.
+If GitHub is not connected yet, open ChatGPT **Settings → Plugins → GitHub**
+and connect your account. Complete the authorization on GitHub, install the
+**ChatGPT Codex Connector** for the account or organization that owns the project,
+and grant it access to the repository. If it is already installed but the repository
+is missing, open [GitHub installed apps](https://github.com/settings/installations),
+select **Configure** for ChatGPT Codex Connector, and add the repository under
+**Repository access**. Organization installations may require an administrator.
+
+1. Open [Code Review settings](https://chatgpt.com/settings/code-review).
+2. Select the repository.
+3. Enable **Automatic review**.
+4. Set **Review** to **All PRs**.
+5. Set **Trigger** to **On every push**.
+
+Open a non-draft PR and verify that Codex starts reviewing automatically. Push a
+correction and verify review starts for the new commit too.
 
 See the [official Code Review setup guide](https://learn.chatgpt.com/docs/third-party/github)
 for current settings and account requirements. UI labels may vary. If necessary,
