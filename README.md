@@ -51,6 +51,18 @@ integration. Add checks suitable for your project. Where your GitHub plan suppor
 it, protect the default branch with required checks and approvals. AGENTS.md is
 agent guidance, not a substitute for server-enforced merge rules.
 
+## Recommended agent skills
+
+We recommend installing [Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills)
+for workflows covering planning, implementation, testing and code review:
+
+```sh
+npx skills add addyosmani/agent-skills
+```
+
+See the [upstream installation guide](https://github.com/addyosmani/agent-skills#quick-start)
+for native integrations and other installation options.
+
 ## Included material
 
 - [AGENTS.md](AGENTS.md): development workflow, code style and review instructions.
