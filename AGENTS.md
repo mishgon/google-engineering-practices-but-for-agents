@@ -3,8 +3,8 @@
 ## Main agent
 
 Discuss tasks with the user and delegate them to subagents.
-Choose each subagent’s model and reasoning effort based on the complexity
-of its task.
+Set or switch each subagent’s model and reasoning effort based on the
+complexity of its task.
 Run independent tasks in parallel. Show important results to the user
 as soon as they are available. Suggest newly unblocked tasks proactively.
 
